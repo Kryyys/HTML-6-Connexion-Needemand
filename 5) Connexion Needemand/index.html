@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Needemand</title>
+
+    <style>
+        input:required:invalid {
+            border: 2px solid red;
+        }
+
+        input:required:valid {
+            border : 2px solid green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Connexion Needemand</h1>
+    <form action="">
+        <!--Email-->
+        <div>
+            <label for="email">Email :</label><br>
+            <input type="text" id="email" pattern=".+@needemand.com" required>
+        </div>
+        <br><br>
+
+        <!--Mot de passe-->
+        <div>
+            <label for="mdp">Mot de Passe</label><br>
+            <input type="password" id="motdepasse" pattern="^(?=.*\d)[A-Za-z\d]{6,8}$" required>
+        </div>
+        <br><br>
+
+        <!--Boutons-->
+        <input type="submit" value="C'est parti !">
+        <input type="reset" value="Recommencer">
+    </form>
+</body>
+
+</html>
